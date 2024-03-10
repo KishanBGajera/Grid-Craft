@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GridCraft</title>
+    <link rel="stylesheet" href="styles/theme.css" />
+</head>
+<body>
+    <header>
+        <h1>GridCraft</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="gridBox">
+                <table class="grid"></table>
+            </div>
+            <div class="controls">
+                <div class="colorBox">
+                    <div class="colors">
+                        <div class="color red"></div>
+                        <div class="color blue"></div>
+                        <div class="color green"></div>
+                        <div class="color yellow"></div>
+                        <div class="color purple"></div>
+                        <div class="color orange"></div>
+                        <div class="color pink"></div>
+                        <div class="color brown"></div>
+                        <div class="color black"></div>
+                        <div class="color white"></div>
+                        <div class="color gray"></div>
+                        <div class="color cyan"></div>
+                    </div>
+                </div>
+                <div class="colorPicker">
+                    <div class="label">picker</div>
+                    <input type="color" id="colorPicker" />
+                </div>
+                <div class="currentColorBlock">
+                    <div class="label">current color</div>
+                    <div class="color currentColor"></div>
+                </div>
+                <button class="clear" onclick="window.location.reload()">reset</button>
+            </div>
+        </div>
+    </main>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <footer>
+        by Kishan B. Gajera <a href="https://www.github.com/KishanBGajera" target="_blank"><i class="fa fa-github"></i></a> <a href="https://linkedin.com/in/kishan-b-gajera" target="_blank"><i class="fa fa-linkedin"></i></a>
+    </footer>
+    
+    <script src="scripts/main.js"></script>
+    <script src="scripts/gridGenerator.js"></script>
+    <link rel="stylesheet" href="styles/grid.css" />
+</body>
+</html>
