@@ -42,7 +42,11 @@
                     <div class="label">current color</div>
                     <div class="color currentColor"></div>
                 </div>
-                <button class="clear" onclick="window.location.reload()">reset</button>
+                <div class="actions">
+                    <button class="action undo" onclick="undo()">undo</button>
+                    <button class="action redo" onclick="redo()">redo</button>
+                    <button class="action reset" onclick="window.location.reload()">reset</button>
+                </div>
             </div>
         </div>
     </main>
