@@ -19,8 +19,9 @@ function generateGrid(){
         for(var j = 0; j < cols; j++){
             const cell = document.createElement("td");
             
-            cell.id = 'c'+'.'+i+'.'+j;
+            cell.id = 'c'+'-'+i+'-'+j;
             cell.className = "gridcell";
+            cell.style.backgroundColor = 'white';
 
             cell.addEventListener('click', () => {
                 changeColor(cell); // reference in ./main.js
