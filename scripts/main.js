@@ -6,6 +6,8 @@ let colorPicker = document.getElementById("colorPicker");
 let undoStack = [];
 let redoStack = [];
 
+let toggleBordersButton = document.getElementsByClassName("toggleBorders")[0];
+
 colorPicker.addEventListener("input", () => {
     setCurrentColor(colorPicker.value);
 })
@@ -27,7 +29,7 @@ function changeColor(cell, backgroundColor=currentColor){
     cell.style.backgroundColor = backgroundColor;
 }
 
-function toggleBorders(){
+toggleBordersButton.addEventListener("click", () => {
     var cells = document.querySelectorAll(".gridcell");
     if(cells[0].style.border){
         cells.forEach((cell) => {
@@ -39,7 +41,7 @@ function toggleBorders(){
             cell.style.border = '1px solid black';
         });
     }
-}
+});
 
 function undo(){
     if(undoStack.length){
