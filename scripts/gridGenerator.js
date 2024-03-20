@@ -22,6 +22,7 @@ function generateGrid(){
             cell.id = 'c'+'-'+i+'-'+j;
             cell.className = "gridcell";
             cell.style.backgroundColor = 'white';
+            cell.style.border = "1px solid black";
 
             cell.addEventListener('click', () => {
                 changeColor(cell); // reference in ./main.js

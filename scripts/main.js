@@ -27,6 +27,20 @@ function changeColor(cell, backgroundColor=currentColor){
     cell.style.backgroundColor = backgroundColor;
 }
 
+function toggleBorders(){
+    var cells = document.querySelectorAll(".gridcell");
+    if(cells[0].style.border){
+        cells.forEach((cell) => {
+            cell.style.border = '';
+        });
+    }
+    else{
+        cells.forEach((cell) => {
+            cell.style.border = '1px solid black';
+        });
+    }
+}
+
 function undo(){
     if(undoStack.length){
         let [cell, backgroundColor, lastColor] = undoStack.pop();
