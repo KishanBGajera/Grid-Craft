@@ -43,6 +43,37 @@ toggleBordersButton.addEventListener("click", () => {
     }
 });
 
+let ctrlPressed = false;
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Control") {
+        ctrlPressed = true;
+    }
+});
+
+document.addEventListener("keyup", (event) => {
+    if (event.key === "Control") {
+        ctrlPressed = false;
+    }
+});
+
+document.addEventListener("keydown", handleShortcut);
+
+function handleShortcut(event) {
+    if (ctrlPressed) {
+        switch(event.key){
+            case "z":
+                event.preventDefault();
+                undo();
+                break;
+            case "y":
+                event.preventDefault();
+                redo();
+                break;
+        }
+    }
+}
+
 function undo(){
     if(undoStack.length){
         let [cell, backgroundColor, lastColor] = undoStack.pop();
